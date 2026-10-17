@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 //Routes
 app.get("/", async(req,res)=>{
-    res.status.json({success: true, message: "Server Running Successfully"});
+    res.status(200).json({success: true, message: "Server Running Successfully"});
 });
 
 app.listen(PORT,(err)=>{
