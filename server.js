@@ -10,7 +10,7 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:3000", "https://galaxybets.casino"],
+    origin: ["http://localhost:3000", "https://www.galaxybets.casino"],
     credentials: true,
 }));
 app.use(cookieParser());
