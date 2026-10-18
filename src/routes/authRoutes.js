@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const limiter = require("../utils/limiter");
 const authMiddleware = require("../middleware/authMiddleware");
-const {Signin, Login, Me, Logout} = require("../controllers/authRoutes");
+const {Signin, Login, Me, Logout} = require("../controllers/auth");
 
 router.post("/sigin", limiter, Signin);
 router.post("/login", limiter, Login);
