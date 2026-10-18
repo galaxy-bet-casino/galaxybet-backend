@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const dbConnection = require("./src/config/dbConnection");
 
 const app = express();
 const PORT = process.env.PORT;
@@ -17,6 +18,9 @@ app.get("/", async (req, res) => {
         message: "Server Running Successfully"
     });
 });
+
+// Mongoose Connection
+dbConnection();
 
 app.listen(PORT, (err) => {
     if (err) {
